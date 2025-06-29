@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - My Tasks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Floating Particles -->
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <h1 class="app-title">TaskFlow</h1>
+            <div class="user-section">
+                <span class="user-name" id="userName">Loading...</span>
+                <img class="user-avatar" id="userAvatar" alt="User Avatar">
+                <button class="logout-btn" onclick="logout()">
+                    <span>↗</span> Sign Out
+                </button>
+            </div>
+        </nav>
+
+        <!-- Task Control Bar -->
+        <div class="task-controls">
+            <button class="control-btn active" data-filter="todo" onclick="filterTasks('todo')">
+                Todo (<span id="todo-count">0</span>)
+            </button>
+            <button class="control-btn" data-filter="completed" onclick="filterTasks('completed')">
+                Completed (<span id="completed-count">0</span>)
+            </button>
+            <button class="control-btn" data-filter="archived" onclick="filterTasks('archived')">
+                Archived (<span id="archived-count">0</span>)
+            </button>
+        </div>
+
+        <!-- Search Bar -->
+        
+
+        <!-- Add New Task Section -->
+        <div class="add-task-section">
+            <form class="add-task-form" onsubmit="addTask(event)">
+                <input 
+                    type="text" 
+                    class="task-input" 
+                    placeholder="Add your task (text-box)"
+                    id="taskInput"
+                    required
+                >
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+
+        <div class="search-section">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    class="search-input" 
+                    placeholder="Search tasks..."
+                    id="searchInput"
+                    oninput="searchTasks()"
+                >
+                <button class="clear-search-btn" onclick="clearSearch()" id="clearSearchBtn" style="display: none;">
+                    ✕
+                </button>
+            </div>
+        </div>
+
+        <!-- Task List -->
+        <div class="task-list" id="taskList">
+            <!-- Tasks will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
