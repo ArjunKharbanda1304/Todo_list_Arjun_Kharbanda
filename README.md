@@ -1,8 +1,9 @@
-📝 TaskFlow - Todo Application
+**📝 TaskFlow - Todo Application**
 
 TaskFlow is a personal productivity web application designed to help users manage their tasks across different stages — Todo, Completed, and Archived. This project was built using HTML5, CSS3, and Vanilla JavaScript, with data persistence via localStorage and external API integrations.
 
-🚀 Features
+**🚀 Features**
+
 ✅ Landing Page (index.html)
 Age verification system (Only users above 10 years old allowed)
 
