@@ -70,13 +70,6 @@ Smooth transitions and intuitive interactions
 🛠️ Getting Started
 Clone this repository:
 
-bash
-Copy
-Edit
-git clone https://github.com/your-username/taskflow.git
-Open index.html in your browser to begin.
-
-Optionally, deploy the project on platforms like Vercel for public access.
 
 📝 Future Enhancements (Optional)
 Task search or filtering
