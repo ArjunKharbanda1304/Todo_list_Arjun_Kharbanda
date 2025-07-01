@@ -5,6 +5,7 @@ let currentUser = null
 
 // Initialize app
 document.addEventListener("DOMContentLoaded", async () => {
+  
   // Check if user is logged in
   const userData = localStorage.getItem("taskflowUser")
   if (!userData) {
