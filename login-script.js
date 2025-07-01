@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 1500)
       return
     } else {
+      
       // Clear invalid data
       localStorage.removeItem("taskflowUser")
     }
